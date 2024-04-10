@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Calculadora Básica</title>
+<script>
+function calcula(operacion) {
+    var valor1 = document.calc.operando1.value;
+    var valor2 = document.calc.operando2.value;
+    var resultado;
+
+    valor1 = parseFloat(valor1);
+    valor2 = parseFloat(valor2);
+
+    if (isNaN(valor1) || isNaN(valor2)) {
+        alert("Por favor, introduce números válidos.");
+        return;
+    }
+
+    switch (operacion) {
+        case '+':
+            resultado = valor1 + valor2;
+            break;
+        case '-':
+            resultado = valor1 - valor2;
+            break;
+        case '*':
+            resultado = valor1 * valor2;
+            break;
+        case '/':
+            if (valor2 === 0) {
+                alert("No se puede dividir por cero.");
+                return;
+            }
+            resultado = valor1 / valor2;
+            break;
+        case '%':
+            resultado = valor1 % valor2;
+            break;
+        case '**':
+            resultado = Math.pow(valor1, valor2);
+            break;
+        default:
+            alert("Operación no válida");
+            return;
+    }
+
+    document.calc.resultado.value = resultado;
+}
+</script>
+</head>
+<body>
+<form name="calc">
+<input type="text" name="operando1" value="0" size="12"><br>
+<input type="text" name="operando2" value="0" size="12"><br>
+<input type="button" value=" + " onclick="calcula('+')">
+<input type="button" value=" - " onclick="calcula('-')">
+<input type="button" value=" X " onclick="calcula('*')">
+<input type="button" value=" / " onclick="calcula('/')">
+<input type="button" value=" % " onclick="calcula('%')">
+<input type="button" value=" ** " onclick="calcula('**')"><br>
+<input type="text" name="resultado" value="0" size="12">
+</form>
+</body>
+</html>
