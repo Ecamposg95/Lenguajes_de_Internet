@@ -1,60 +1,12 @@
-/*-----------------------------------------------------------------------------------
-  Template Name: Uniqlo-Minimalist eCommerce HTML5 Template.
-  Template URI: #
-  Description: Uniqlo is a unique website template designed in HTML with a simple & beautiful look. There is an excellent solution for creating clean, wonderful and trending material design corporate, corporate any other purposes websites.
-  Author: HasTech
-  Author URI: https://themeforest.net/user/hastech/portfolio
-  Version: 1.1
 
-
------------------------------------------------------------------------------------
-  
-  CSS INDEX
-  ===================
-
-  01. Google fonts
-  02. Scroll To Top
-  03. Product Area
-  04. Log In Register Area
-  05. Bradcaump Area
-  06. Quickview Area
-  07. New Product Area
-  08. Best Product Area
-  09. Blog Area
-  10. Feature Product Area
-  11. Popular Product Area
-  12. Load More Area
-  13. Newsletter Area
-  14. Choose Us Area
-  15. Team Area
-  16. Testimonial Area
-  17. Our Brand Area
-  18. Our Shop Area
-  19. Our Shop Sidebar
-  20. Our Contact Area
-  21. Our Product Details Area
-  22. Wrapper Sidebar
-  23. Our Blog Details
-  24. Shop Details Area
-  25. Our Wishlist Area
-  26. Our Cart Area
-  27. Our Checkout Page
-  28. Banner Area
-
-
-
------------------------------------------------------------------------------------*/
 
 
 /*----------------------------------------*/
-/*  1. Google fonts
+/*  Google fonts
 /*----------------------------------------*/
     @import url('https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700|Poppins:300,400,500,600,700');
     @import url('https://fonts.googleapis.com/css?family=Arizonia');
-/*
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Dosis', sans-serif;
-*/
+
 
 /*---------------------------------------
   02. Scroll To Top
@@ -450,19 +402,19 @@ button {
     height: 320px;
 }
 .bradcaump-title {
-    color: #343434;
+    color: #ffffff;
     font-size: 36px;
     font-weight: 400;
     line-height: 30px;
     text-transform: capitalize;
 }
 .breadcrumb-item {
-    color: #343434;
+    color: #ffffff;
     font-size: 18px;
     text-transform: capitalize;
 }
 .breadcrumb-item.active {
-    color: #343434;
+    color: #ffbb00;
     font-size: 18px;
     text-transform: capitalize;
 }
@@ -514,7 +466,7 @@ button {
     padding-right: 13px;
 }
 .rating li span {
-    color: #ff4136;
+    color: #6e2f2bc4;
 }
 .rating li + li {
     margin-left: 3px;
