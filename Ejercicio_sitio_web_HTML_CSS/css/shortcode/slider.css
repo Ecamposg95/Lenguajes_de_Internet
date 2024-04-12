@@ -44,7 +44,7 @@
 .slider__inner h1,
 .slider__content h1 ,
 .slider__content h2 {
-  color: #b81a1a;
+  color: #7b003a;
   font-size: 60px;
   font-weight: 500;
   text-align: center;
@@ -66,7 +66,7 @@
 }
 .slider__btn a.htc__btn,
 .uniq__btn a.htc__btn {
-    color: #000;
+    color: #ffffff;
     font-family: Dosis;
     font-size: 16px;
     font-weight: 500;
@@ -358,7 +358,7 @@
   text-align: left;
 }
 .slider__content p {
-  color: #666666;
+  color: #b4b4b4;
   font-size: 15px;
   line-height: 26px;
   margin-top: 22px;
