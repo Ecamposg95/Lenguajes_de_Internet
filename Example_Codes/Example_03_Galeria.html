@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title> Galeria de imagenes </title>
+    <title> Galeria de imagenes </title>
 </head>
 
 <body>
-<hr>	
-<br>
-<center>
-<img src="uno.jpg" name="uno">
-<form name="galeria">
+    <hr>
+    <br>
+    <center>
+        <img src="/imagenes/UNO.jpg" name="uno">
+        <form name="galeria">
 
-<script language="JavaScript">
-var imagenes=new Array()
-var contador=0
-imagenes[0]="uno.jpg"
-imagenes[1]="dos.jpg"
-imagenes[2]="tres.jpg"
-imagenes[3]="cuatro.jpg"
-imagenes[4]="cinco.jpg"
+            <script language="JavaScript">
+                var imagenes = new Array()
+                var contador = 0
+                var directorio = "/imagenes/"
+                imagenes[0] = directorio + "UNO.jpg"
+                imagenes[1] = directorio + "DOS.jpg"
+                imagenes[2] = directorio + "TRES.jpg"
 
-function atras()
-{
-	contador--
-	document.images.uno.src=imagenes[contador]
-		if(contador < 0)
-	{
-		contador = 4
-		document.images.uno.src=imagenes[contador]
-	}
-}
+                function atras() {
+                    contador--
+                    document.images.uno.src = imagenes[contador]
+                    if (contador < 0) {
+                        contador = 2
+                    }
+                    document.images.uno.src = imagenes[contador]
+                }
 
-function adelante()
-{
-	contador++
-	document.images.uno.src=imagenes[contador]
-	if(contador >= 5)
-	{
-		contador = 0
-		document.images.uno.src=imagenes[contador]
-	}	
-}
-</script>
+                function adelante() {
+                    contador++
+                    document.images.uno.src = imagenes[contador]
+                    if (contador > 2) {
+                        contador = 0
+                    }
+                    document.images.uno.src = imagenes[contador]
+                }
+            </script>
 
-<input type="button" value="atras" name="B1" onClick="atras()"> 
-<input type="button" value="adelante" name="B2" onClick="adelante()">
-<br>
+            <input type="button" value="atras" name="B1" onClick="atras()">
+            <input type="button" value="adelante" name="B2" onClick="adelante()">
+            <br>
 
-</form>
-</center>
+        </form>
+    </center>
 
 </body>
+
 </html>
