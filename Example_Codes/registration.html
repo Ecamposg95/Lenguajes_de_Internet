@@ -1,0 +1,118 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+var ios = 0;
+var aos = 0;
+function insertOldSchool(theSel, newText, newValue)
+{
+  if (theSel.length == 0) {
+    var newOpt1 = new Option(newText, newValue);
+    theSel.options[0] = newOpt1;
+    theSel.selectedIndex = 0;
+  } else if (theSel.selectedIndex != -1) {
+    var selText = new Array();
+    var selValues = new Array();
+    var selIsSel = new Array();
+    var newCount = -1;
+    var newSelected = -1;
+    var i;
+    for(i=0; i<theSel.length; i++)
+    {
+      newCount++;
+      if (newCount == theSel.selectedIndex) {
+        selText[newCount] = newText;
+        selValues[newCount] = newValue;
+        selIsSel[newCount] = false;
+        newCount++;
+        newSelected = newCount;
+      }
+      selText[newCount] = theSel.options[i].text;
+      selValues[newCount] = theSel.options[i].value;
+      selIsSel[newCount] = theSel.options[i].selected;
+}
+    for(i=0; i<=newCount; i++)
+    {
+      var newOpt = new Option(selText[i], selValues[i]);
+      theSel.options[i] = newOpt;
+      theSel.options[i].selected = selIsSel[i];
+    }
+  }
+}
+
+function appendOldSchool(theSel, newText, newValue)
+{
+  if (theSel.length == 0) {
+    var newOpt1 = new Option(newText, newValue);
+    theSel.options[0] = newOpt1;
+    theSel.selectedIndex = 0;
+  } else if (theSel.selectedIndex != -1) {
+    var selText = new Array();
+    var selValues = new Array();
+    var selIsSel = new Array();
+    var newCount = -1;
+    var newSelected = -1;
+    var i;
+    for(i=0; i<theSel.length; i++)
+    {
+      newCount++;
+      selText[newCount] = theSel.options[i].text;
+      selValues[newCount] = theSel.options[i].value;
+      selIsSel[newCount] = theSel.options[i].selected;
+      
+      if (newCount == theSel.selectedIndex) {
+        newCount++;
+        selText[newCount] = newText;
+        selValues[newCount] = newValue;
+        selIsSel[newCount] = false;
+        newSelected = newCount - 1;
+      }
+    }
+    for(i=0; i<=newCount; i++)
+    {
+      var newOpt = new Option(selText[i], selValues[i]);
+      theSel.options[i] = newOpt;
+      theSel.options[i].selected = selIsSel[i];
+    }
+  }
+}
+
+function removeOldSchool(theSel)
+{
+  var selIndex = theSel.selectedIndex;
+  if (selIndex != -1) {
+    for(i=theSel.length-1; i>=0; i--)
+    {
+      if(theSel.options[i].selected)
+      {
+        theSel.options[i] = null;
+      }
+    }
+    if (theSel.length > 0) {
+      theSel.selectedIndex = selIndex == 0 ? 0 : selIndex - 1;
+    }
+  }
+}
+//-->
+</script>
+
+
+
+<form>
+<input type="button" value="Insert"
+ onclick="ios++; insertOldSchool(this.form.selos, 'Insert' + ios, 'insert' + ios);" />
+<input type="button" value="Append"
+ onclick="aos++; appendOldSchool(this.form.selos, 'Append' + aos, 'append' + aos);" />
+<input type="button" value="Remove"
+ onclick="removeOldSchool(this.form.selos);" />
+<br />
+<select name="selos" size="10" multiple="multiple">
+<option value="original1">Orig1</option>
+<option value="original2">Orig2</option>
+<option value="original2" selected="selected">Orig3</option>
+<option value="original2">Orig4</option>
+</select>
+</form>
+
+
+
+
+

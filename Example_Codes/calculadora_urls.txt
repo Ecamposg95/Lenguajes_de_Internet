@@ -1,0 +1,5 @@
+// calculadora estandar en javascript
+
+http://aprende-web.net/jspracticas/calculadora/calculadora1.php
+
+

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Registration</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
+        <meta name="keywords" content="html5, css3, , switch, animation, :target, pseudo-class" />
+        <meta name="author" content="Luis Antonio Garcia" />
+		
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <!--  <link rel="stylesheet" type="text/css" href="css/demo.css" /> -->
+        <link rel="stylesheet" type="text/css" href="css/style3.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+    
+    <script  type="text/javascript">
+	  function changecheckbox() {registerregister
+		  if(register.talkduration1.checked != "checked") {
+			  register.talkduration.value=20;
+			  register.talkduration2.checked=null;
+		  }
+		  register.talkduration1.checked="checked";
+	  } // end of function changecheckbox()
+
+	  function changecheckbox2() {
+		  if(register.talkduration2.checked != "checked") {
+			  register.talkduration.value=40;
+			  register.talkduration1.checked=null;
+		  }
+		  register.talkduration2.checked="checked";
+	  } // end of function changecheckbox2()
+
+   	  function changeFunc() {
+    	  	var selectBox = document.getElementById("country");
+          	var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+      		alert(selectedValue);
+          } // end of fucntion changeFunc()
+
+    </script>
+    
+</head>
+    <body>
+        <div class="container">
+            <!-- Codrops top bar -->
+            <div class="codrops-top">
+                
+                <span class="right">
+
+                </span>
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+            <header>
+                <h1> <span></span></h1>
+				<nav class="codrops-demos">
+				
+				</nav>
+            </header>
+            <section>
+                <div id="container_demo" >
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form  name="register" action="captureform.php" method="post" autocomplete="on" enctype="multipart/form-data"> 
+                                <h1>Registration</h1>
+                                <p>
+                                    <label for="firstname" class="firstname" data-icon="u" >First Name</label>
+                                    <input id="firstname" name="firstname" required="required" type="text" placeholder="Example. Jeanette Juarez" autofocus />
+                                </p>
+								<p> 
+                                    <label for="lastname" class="lastname" data-icon="u" >Last Name</label>
+                                    <input id="lastname" name="lastname" required="required" type="text" placeholder="Example. Jeanette Juarez"   />
+                                </p>
+                                <p> 
+                                    <label for="email" class="email" data-icon="e"> Email </label>
+                                    <input id="email" name="email" required="required" type="email" placeholder="Example. correo@dominio.com" /> 
+                                </p>
+								<p> 
+                                    <label for="institution" class="institution" data-icon=""> Institution </label>
+                                    <input id="institution" name="institution" required="required" type="text" placeholder="Example. IPN" /> 
+                                </p>
+								<p>
+                                    <label for="country" class="country" data-icon=""> Country </label>
+                                </p>
+                                <p>  
+                                    <select id="country" name="country" onchange="changeFunc()">
+                                    	<option selected="selected" value="- Country -"  >- Country -</option>
+					<option value="México"  >México</option>
+				    </select>
+                                </p>
+								<p> 
+                                    <label for="titlepaper" class="titlepaper" data-icon=""> Title of the paper </label>
+                                    <input id="titlepaper" name="titlepaper" required="required" type="text" placeholder="" /> 
+                                </p>
+                                <p>
+                                    <label for="file" class="file" data-icon=""> Upload Abstract Latex </label>
+                                    <label for="file" class="file" data-icon=""> (1 page without any macro)</label>
+									<input type="file" id="file" name="file" class=""/>
+                                </p>
+								 <p class="">
+								 <label for="talkduration" class="talkduration" data-icon=""> Duration of your Talk</label>
+									<input type="checkbox" name="talkduration1" id="talkduration1" value=20 onchange="changecheckbox()" checked="checked"> 20 min.
+									<input type="checkbox" name="talkduration2" id="talkduration2" value=40 onchange="changecheckbox2()"> 40 min.
+									<input type="hidden" name="talkduration" id="talkduration" value=20>
+								</p>
+                                <p class="login button">
+                                    <input type="submit" value="SEND" style="display: " />
+								</p>
+								<!--
+                                <p class="change_link">
+									Olvidaste tu Contraseña?
+									<a href="#toregister" class="to_register">Entrar</a>
+								</p>
+								-->
+                            </form>
+                        </div>
+<!--
+                        <div id="register" class="animate form">
+                            <form  action="mysuperscript.php" autocomplete="on"> 
+                                <h1> Recuperar </h1> 
+                                
+                                <p> 
+                                    <label for="emailsignup" class="youmail" data-icon="e" >Email </label>
+                                    <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="correo@mail.com"/> 
+                                </p>
+                                
+                               
+                                <p class="signin button"> 
+									<input type="submit" value="Aceptar"/> 
+								</p>
+                                <p class="change_link">  
+									Recuperaste tu contraseña
+									<a href="#tologin" class="to_register"> Ingresar </a>
+								</p>
+                            </form>
+                        </div>
+-->						
+                    </div>
+                </div>  
+            </section>
+        </div>
+    </body>
+</html>
