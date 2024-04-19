@@ -1,51 +1,70 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title> Galeria de imagenes </title>
+    <title>Galería de Imágenes</title>
+    <style>
+        .center { text-align: center; }
+        #datos { 
+            text-align: center;
+        }
+    </style>
 </head>
-
 <body>
     <hr>
     <br>
-    <center>
-        <img src="/Example_Codes/imagenes/UNO.jpg" name="uno">
+    <div class="center">
+        <img src="/Example_Codes/imagenes/UNO.jpg" id="imagenPrincipal">
         <form name="galeria">
+            <script>
+                var imagenes = [
+                    "/Example_Codes/imagenes/UNO.jpg",
+                    "/Example_Codes/imagenes/DOS.jpg",
+                    "/Example_Codes/imagenes/TRES.jpg",
+                    "/Example_Codes/imagenes/CUATRO.jpg",
+                    "/Example_Codes/imagenes/CINCO.jpg"
+                ];
+                var contador = 0;
 
-            <script language="JavaScript">
-                var imagenes = new Array()
-                var contador = 0
-                var directorio = "/Example_Codes/imagenes/"
-                imagenes[0] = directorio + "UNO.jpg"
-                imagenes[1] = directorio + "DOS.jpg"
-                imagenes[2] = directorio + "TRES.jpg"
+                var alumno = {
+                    nombre: "Emmanuel",
+                    grupo: "8CV12",
+                    clase: "lenguajes de internet",
+                    estatura: "1.77"
+                };
+
+                function mostrar() {
+                    var parrafo = document.getElementById("datos");
+                    if (!parrafo) {
+                        parrafo = document.createElement("p");
+                        parrafo.id = "datos";
+                        document.body.appendChild(parrafo);
+                    }
+                    parrafo.innerHTML = `${alumno.nombre}<br>${alumno.grupo}<br>${alumno.clase}<br>${alumno.estatura}<br>`;
+                    parrafo.style.display = "block"; // Asegura que el párrafo esté visible y centrado
+                }
+
+                function ocultar() {
+                    var parrafo = document.getElementById("datos");
+                    if (parrafo) {
+                        parrafo.style.display = "none"; // Oculta el párrafo
+                    }
+                }
 
                 function atras() {
-                    contador--
-                    document.images.uno.src = imagenes[contador]
-                    if (contador < 0) {
-                        contador = 2
-                    }
-                    document.images.uno.src = imagenes[contador]
+                    contador = (contador - 1 + imagenes.length) % imagenes.length;
+                    document.getElementById("imagenPrincipal").src = imagenes[contador];
                 }
 
                 function adelante() {
-                    contador++
-                    document.images.uno.src = imagenes[contador]
-                    if (contador > 2) {
-                        contador = 0
-                    }
-                    document.images.uno.src = imagenes[contador]
+                    contador = (contador + 1) % imagenes.length;
+                    document.getElementById("imagenPrincipal").src = imagenes[contador];
                 }
             </script>
-
-            <input type="button" value="atras" name="B1" onClick="atras()">
-            <input type="button" value="adelante" name="B2" onClick="adelante()">
-            <br>
-
+            <input type="button" value="Atrás" onClick="atras()">
+            <input type="button" value="Adelante" onClick="adelante()">
+            <input type="button" value="Mostrar" onClick="mostrar()">
+            <input type="button" value="Ocultar" onClick="ocultar()">
         </form>
-    </center>
-
+    </div>
 </body>
-
 </html>
