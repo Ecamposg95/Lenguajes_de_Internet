@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reproductor de Audio Personalizado</title>
+    <style>
+        #progressbar {
+            width: 0%;
+            height: 20px;
+            background-color: blue;
+        }
+        #container {
+            width: 100%;
+            background-color: #ddd;
+            cursor: pointer; /* Indica que es interactivo */
+        }
+    </style>
+</head>
+<body>
+    <!--Container-->
+    <div class="container">
+        <!--Row-->
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8 col-md-10">
+                <div class="block-tracklist">
+                    <audio preload class="album" id="audioPlayer" controls></audio>
+                    <div class="block-content pb-0">
+                        <img class="mb-0" src="img/album/5.jpg" alt="">
+                        <!-- Barra de progreso -->
+                        <div id="container">
+                            <div id="progressbar"></div>
+                        </div>
+                    </div>
+                    <ol class="playlist">
+                        <li class="as-link" data-src="mp3/in-a-sentimental-mood.mp3">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="block-track">
+                                        <h6 class="mb-0 opc-70 uppercase">A Love Supreme</h6>
+                                        <span>John Coltrane</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Repite estructuras similares para más pistas -->
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!--End row-->
+    </div>
+    <!--End container-->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var audioPlayer = document.getElementById('audioPlayer');
+            var progressbar = document.getElementById('progressbar');
+            var container = document.getElementById('container');
+
+            audioPlayer.addEventListener('timeupdate', function() {
+                var percentage = (this.currentTime / this.duration) * 100;
+                progressbar.style.width = percentage + '%';
+            });
+
+            document.querySelectorAll('.playlist .as-link').forEach(item => {
+                item.addEventListener('click', function() {
+                    audioPlayer.src = this.getAttribute('data-src');
+                    audioPlayer.play();
+                });
+            });
+
+            container.addEventListener('click', function(e) {
+                var rect = container.getBoundingClientRect();
+                var clickPosition = (e.clientX - rect.left) / rect.width;
+                audioPlayer.currentTime = clickPosition * audioPlayer.duration;
+            });
+        });
+    </script>
+</body>
+</html>

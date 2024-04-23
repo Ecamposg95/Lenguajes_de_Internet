@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+
+
+</script>
+
+const obj = {
+  foo: 1,
+  // You should not define such a method on your own object,
+  // but you may not be able to prevent it from happening if
+  // you are receiving the object from external input
+  propertyIsEnumerable() {
+    return false;
+  },
+};
+
+obj.propertyIsEnumerable("foo"); // false; unexpected result
+Object.prototype.propertyIsEnumerable.call(obj, "foo"); // true; expected result
+
+
+
+<head>
+      <TITLe>Objeto en ECMAScrip</TITLe>
+   </head>
