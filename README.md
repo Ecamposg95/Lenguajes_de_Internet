@@ -14,6 +14,8 @@ El propósito de este repositorio es servir como un espacio centralizado donde e
 
 Este repositorio no solo documenta mi progreso y aprendizaje en el curso, sino que también sirve como un recurso para futuros estudiantes y para cualquier persona interesada en aprender sobre el desarrollo web desde un enfoque práctico.
 
+
+
 ### Autor
 
 **Emmanuel Campos Genaro**
