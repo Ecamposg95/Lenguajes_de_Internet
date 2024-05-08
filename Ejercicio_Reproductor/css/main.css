@@ -1086,3 +1086,27 @@ section.about .block-content.text-md-right, .block-album {margin-bottom: 1.875em
     
 }
 /*End media queries*/
+
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espacio entre botones */
+}
+
+
+button {
+    padding: 10px 20px; /* Ajusta el relleno según tus preferencias */
+    font-size: 16px; /* Tamaño de fuente */
+    color: white; /* Color del texto */
+    background-color: #000000; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de mano al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave de colores */
+}
+
+button:hover {
+    background-color: #9b0d77; /* Color de fondo al pasar el mouse */
+}

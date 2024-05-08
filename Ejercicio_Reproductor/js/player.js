@@ -1,14 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var audio = document.querySelector('.album');
-    var progressBar = document.getElementById('progress-bar');
-    var playButton = document.getElementById('play');
-    var nextButton = document.getElementById('next');
-    var prevButton = document.getElementById('prev');
-    var tracks = document.querySelectorAll('.as-link');
-    var currentTrack = 0;
+    var audio = document.querySelector('.album'); // Elemento de audio
+    var progressBar = document.getElementById('progress-bar'); // Barra de progreso
+    var playButton = document.getElementById('play'); // Botón de play/pause
+    var nextButton = document.getElementById('next'); // Botón de siguiente pista
+    var prevButton = document.getElementById('prev'); // Botón de pista anterior
+    var albumImage = document.querySelector('.block-content img'); // Imagen del álbum
+    var tracks = document.querySelectorAll('.track-item'); // Todos los elementos de la pista
+    var currentTrack = 0; // Índice de la pista actual
 
     function loadTrack(trackIndex) {
-        audio.src = tracks[trackIndex].getAttribute('data-src');
+        var trackElement = tracks[trackIndex];
+        audio.src = trackElement.getAttribute('data-src');
+        albumImage.src = trackElement.getAttribute('data-img-src'); // Actualiza la imagen del álbum
         audio.load();
         audio.play();
         updateActiveTrack(trackIndex);
@@ -56,9 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
         audio.currentTime = time;
     });
 
-    // Cargar la primera pista
+    // Cargar la primera pista al inicio
     if (tracks.length > 0) {
         loadTrack(currentTrack);
     }
 });
-
