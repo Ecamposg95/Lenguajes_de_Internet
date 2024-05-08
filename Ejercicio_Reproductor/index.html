@@ -13,6 +13,8 @@
     <link href="css/fonts.css" rel="stylesheet" type="text/css" media="all" />
     <link href="http://fonts.googleapis.com/css?family=Dosis:100,300,400,600,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,300,400,400i,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
    <body>
       <!-- Preloader -->
@@ -139,82 +141,115 @@
                   </div>
                </div>
             </div>
-<div class="container">
-   <!--Row-->
 
 
             <div class="container">
-               <!--Row-->
                <div class="row justify-content-center">
-                  <div class="col-12 col-lg-8 col-md-10">
-                     <div class="block-tracklist">
-                        <audio preload class="album"></audio>
-                        <div class="block-content pb-0">
-                           <img  class="mb-0" src="img/album/5.jpg" alt="">
-                        </div>
-                        <ol class="playlist">
-                           <li>
-                              <div class="as-link" data-src="mp3/in-a-sentimental-mood.mp3">
-                                 <!--Row-->
-                                 <div class="row">
-                                    <div class="col-lg-6 col-md-6 ">
-                                       <div class="block-track">
-                                          <h6 class="mb-0 opc-70 uppercase">A Love Supreme</h6>
-                                          <span>John Coltrane </span>
-                                       </div>
+                   <div class="col-12 col-lg-8 col-md-10">
+                       <div class="block-tracklist">
+                           <audio preload class="album"></audio>
+                           <div class="block-content pb-0">
+                               <img class="mb-0" src="img/album/1.jpg" alt="">
+                           </div>
+                           <div class="player-controls">
+                              <button id="prev"><i class="fas fa-backward"></i></button>
+                              <button id="play"><i class="fas fa-play"></i></button>
+                              <button id="next"><i class="fas fa-forward"></i></button>
+                              <input type="range" id="progress-bar" value="0" max="100" style="width: 100%;">
+                           </div>
+                           <ol class="playlist">
+                              <li class="track-item" data-src="mp3/in-a-sentimental-mood.mp3" data-img-src="img/album/5.jpg">
+                                  <div class="row">
+                                      <div class="col-lg-6 col-md-6">
+                                          <div class="block-track">
+                                              <h6 class="mb-0 opc-70 uppercase">A Love Supreme</h6>
+                                              <span>John Coltrane</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="track-item" data-src="mp3/feel.mp3" data-img-src="img/album/7.jpg">
+                                  <div class="row">
+                                      <div class="col-lg-6 col-md-6">
+                                          <div class="block-track">
+                                              <h6 class="mb-0 opc-70 uppercase">Feel</h6>
+                                              <span>Robbie Williams</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="track-item" data-src="mp3/7th-symphony-2nd-movement.mp3" data-img-src="img/album/6.jpg">
+                                  <div class="row">
+                                      <div class="col-lg-6 col-md-6">
+                                          <div class="block-track">
+                                              <h6 class="mb-0 opc-70 uppercase">7th Symphony - 2nd Movement</h6>
+                                              <span>Ludwig van Beethoven</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="track-item" data-src="mp3/signos.mp3" data-img-src="img/album/8.jpg">
+                                  <div class="row">
+                                      <div class="col-lg-6 col-md-6">
+                                          <div class="block-track">
+                                              <h6 class="mb-0 opc-70 uppercase">Signos</h6>
+                                              <span>Soda Stereo</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="track-item" data-src="mp3/weird-fishes.mp3" data-img-src="img/album/2.jpg">
+                                  <div class="row">
+                                      <div class="col-lg-6 col-md-6">
+                                          <div class="block-track">
+                                              <h6 class="mb-0 opc-70 uppercase">Weird Fishes/Arpeggi</h6>
+                                              <span>Radiohead</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <li class="track-item" data-src="mp3/wicked-game.mp3" data-img-src="img/album/9.jpg">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="block-track">
+                                                <h6 class="mb-0 opc-70 uppercase">Wicked Game</h6>
+                                                <span> Chris Isaak</span>
+                                            </div>
+                                        </div>
                                     </div>
-
-                                 </div>
-                              </div>
-                           </li>
-                           <li >
-                              <div class="as-link" data-src="mp3/01.mp3">
-                                 <!--Row-->
-                                 <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                       <div class="block-track">
-                                          <h6 class="mb-0 opc-70 uppercase">Bounce out</h6>
-                                          <span>Limitless </span>
+                                    <li class="track-item" data-src="mp3/piano-quartet-in-a-minor.mp3" data-img-src="img/album/10.jpg">
+                                       <div class="row">
+                                           <div class="col-lg-6 col-md-6">
+                                               <div class="block-track">
+                                                   <h6 class="mb-0 opc-70 uppercase">Quartet for strings and piano in a minor</h6>
+                                                   <span>Gustav Mahler</span>
+                                               </div>
+                                           </div>
                                        </div>
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </li>
-                           <li >
-                              <div class="as-link" data-src="mp3/01.mp3">
-                                 <!--Row-->
-                                 <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                       <div class="block-track">
-                                          <h6 class="mb-0 opc-70 uppercase">Girls are the same</h6>
-                                          <span>Limitless </span>
+                                    </li>
+         
+                                    <li class="track-item" data-src="mp3/winter.mp3" data-img-src="img/album/3.jpg">
+                                       <div class="row">
+                                           <div class="col-lg-6 col-md-6">
+                                               <div class="block-track">
+                                                   <h6 class="mb-0 opc-70 uppercase">Concerto in F minor, op. 8 no. 4, RV 297 “L’inverno</h6>
+                                                   <span>Antonio Vivaldi</span>
+                                               </div>
+                                           </div>
                                        </div>
-                                    </div>
-
-                                 </div>
-                              </div>
-                           </li>
-                           
-                           <li >
-                              <div class="as-link" data-src="mp3/01.mp3">
-                                 <!--Row-->
-                                 <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                       <div class="block-track">
-                                          <h6 class="mb-0 opc-70 uppercase">Falling apart</h6>
-                                          <span>Limitless </span>
+                                    </li>
+         
+                                    <li class="track-item" data-src="mp3/beautiful.mp3" data-img-src="img/album/1.jpg">
+                                       <div class="row">
+                                           <div class="col-lg-6 col-md-6">
+                                               <div class="block-track">
+                                                   <h6 class="mb-0 opc-70 uppercase">Beautiful</h6>
+                                                   <span>Gustavo Cerati</span>
+                                               </div>
+                                           </div>
                                        </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </li>
-                        </ol>
-                     </div>
-                  </div>
-               </div>
-               <!--End row-->
-            </div>
+                                    </li>
+                          </ol>
+                          
             <!--End container-->
          </section>
          <!--End latest album section-->
@@ -425,6 +460,7 @@
       <script src="js/jquery.countdown.min.js" ></script>
       <script src="js/placeholders.min.js"></script>
       <script src="js/script.js"></script>
+      <script src="js/player.js"></script> <!-- Añade esto para incluir tu script de reproductor -->
 
    </body>
 </html>

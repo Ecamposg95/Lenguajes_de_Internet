@@ -13,6 +13,9 @@
     <link href="css/fonts.css" rel="stylesheet" type="text/css" media="all" />
     <link href="http://fonts.googleapis.com/css?family=Dosis:100,300,400,600,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,300,400,400i,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
 </head>
 <body>
 
@@ -22,14 +25,15 @@
               <div class="block-tracklist">
                   <audio preload class="album"></audio>
                   <div class="block-content pb-0">
-                      <img class="mb-0" src="img/album/5.jpg" alt="">
+                      <img class="mb-0" src="img/album/1.jpg" alt="">
                   </div>
                   <div class="player-controls">
-                     <button id="prev">Atrás</button>
-                     <button id="play">Play/Pause</button>
-                     <button id="next">Siguiente</button>
+                     <button id="prev"><i class="fas fa-backward"></i></button>
+                     <button id="play"><i class="fas fa-play"></i></button>
+                     <button id="next"><i class="fas fa-forward"></i></button>
                      <input type="range" id="progress-bar" value="0" max="100" style="width: 100%;">
-                  </div>
+                 </div>
+                 
                   <ol class="playlist">
                      <li class="track-item" data-src="mp3/in-a-sentimental-mood.mp3" data-img-src="img/album/5.jpg">
                          <div class="row">
@@ -98,7 +102,29 @@
                                       </div>
                                   </div>
                               </div>
-                     </li>
+                           </li>
+
+                           <li class="track-item" data-src="mp3/winter.mp3" data-img-src="img/album/3.jpg">
+                              <div class="row">
+                                  <div class="col-lg-6 col-md-6">
+                                      <div class="block-track">
+                                          <h6 class="mb-0 opc-70 uppercase">Concerto in F minor, op. 8 no. 4, RV 297 “L’inverno</h6>
+                                          <span>Antonio Vivaldi</span>
+                                      </div>
+                                  </div>
+                              </div>
+                           </li>
+
+                           <li class="track-item" data-src="mp3/beautiful.mp3" data-img-src="img/album/1.jpg">
+                              <div class="row">
+                                  <div class="col-lg-6 col-md-6">
+                                      <div class="block-track">
+                                          <h6 class="mb-0 opc-70 uppercase">Beautiful</h6>
+                                          <span>Gustavo Cerati</span>
+                                      </div>
+                                  </div>
+                              </div>
+                           </li>
                  </ol>
                  
   

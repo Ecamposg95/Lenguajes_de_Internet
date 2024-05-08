@@ -15,11 +15,20 @@ document.addEventListener('DOMContentLoaded', function() {
         audio.load();
         audio.play();
         updateActiveTrack(trackIndex);
+        updatePlayPauseIcon(); // Actualiza el ícono de play/pause
     }
 
     function updateActiveTrack(trackIndex) {
         tracks.forEach(track => track.classList.remove('active'));
         tracks[trackIndex].classList.add('active');
+    }
+
+    function updatePlayPauseIcon() {
+        if (audio.paused) {
+            playButton.innerHTML = '<i class="fas fa-play"></i>'; // Ícono de play
+        } else {
+            playButton.innerHTML = '<i class="fas fa-pause"></i>'; // Ícono de pause
+        }
     }
 
     playButton.addEventListener('click', function() {
@@ -28,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             audio.pause();
         }
+        updatePlayPauseIcon(); // Cambia el ícono según el estado del audio
     });
 
     nextButton.addEventListener('click', function() {
