@@ -1119,7 +1119,7 @@ section.about .block-content.text-md-right, .block-album {margin-bottom: 1.875em
 
 /* Estilo para la barra de progreso en hover */
 #progress-bar:hover {
-    background-color: #ff00bf; /* Un poco más claro al pasar el mouse */
+    background-color: #ddd; /* Un poco más claro al pasar el mouse */
 }
 
 /* Personalización del thumb de la barra de progreso */
